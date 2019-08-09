@@ -1,0 +1,71 @@
+body {
+    margin:0px;
+}
+.app {
+    width:100%;
+    height:100vh;
+    background-color: #C7F464;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+}
+.card {
+    margin:20px;
+    font-family: 'Fira Code', monospace;
+    font-size:30px;
+    color:whitesmoke;
+    width:200px;
+    height:123px;
+    box-shadow:10px 20px 10px rgba(0, 0, 0, 0.603);
+    perspective: 500px;
+    position:relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+}
+
+.cardface {
+    position: absolute;
+    width:100%;
+    height:100%;
+    backface-visibility: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:15px;
+}
+
+.front {
+    background: red;
+}
+
+
+.back {
+    transform: rotateY(180deg);
+    background-color: rgb(25, 68, 65);
+}
+
+.flipped {
+    transform: rotateY(180deg);
+    box-shadow:-10px 20px 10px rgba(0, 0, 0, 0.603);
+
+}
+
+
+
+.card:nth-child(4n+1) .front {
+    background-color: #C44D58;
+}
+
+.card:nth-child(4n+2) .front {
+    background-color: #FF6B6B;
+}
+
+.card:nth-child(4n+3) .front {
+    background-color: #556270;
+}
+
+.card:nth-child(4n+4) .front {
+    background-color:rgb(60, 60, 216);
+}
